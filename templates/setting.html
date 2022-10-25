@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Setting Page {% endblock %}</h1>
+<form method="post">
+    <div class="form-group">
+        <label for='email'>Email</label>
+        <input type="text" name="title"
+               placeholder="email@address.com" class="form-control"
+               value="{{ request.form['username'] }}"></input>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    <div class="form-group">
+        <label for='alert_interval'>Alert Interval (in minutes)</label>
+        <input type="text" name="interval"
+               placeholder="5" class="form-control"
+               value="{{ request.form['username'] }}"></input>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <h3 style="border: 2px #eee solid; color: red;">{{ message }}</h3>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+{% endblock %}

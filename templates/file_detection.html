@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Submit File for Facial Detection {% endblock %}</h1>
+
+<body>
+  <div>
+      <h3>Detect on Submitted File</h3>
+      <form action = "http://127.0.0.1:5000/uploader" method = "POST"
+         enctype = "multipart/form-data" style="margin-bottom: 50px;">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+      </form>
+  </div>
+</body>
+{% endblock %}

@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS files;
+
+CREATE TABLE files (
+       id INTEGER PRIMARY KEY AUTOINCREMENT,
+       created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+       filename TEXT NOT NULL,
+       user TEXT NOT NULL,
+       detected INTEGER NOT NULL DEFAULT 0,
+       description TEXT NOT NULL DEFAULT ''
+);

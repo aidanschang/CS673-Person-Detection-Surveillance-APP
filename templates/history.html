@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <title>Fafi</title>
+</head>
+{% block content %}
+<h1>{% block title %} History {% endblock %}</h1>
+{% for file in files %}
+<a href="{{ url_for('file', file_id=file['id']) }}">
+    <h2>{{ file['description'] }}</h2>
+</a>
+<span class="badge badge-primary">{{ file['created'] }}</span>
+<span class="badge badge-primary">Faces Detected: {{ file['detected'] }}</span>
+<hr>
+{% endfor %}
+{% endblock %}

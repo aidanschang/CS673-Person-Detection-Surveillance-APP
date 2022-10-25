@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<body>
+  <h1>{% block title %}Webcam Stream for People Detection {% endblock %}</h1>
+  <div class="video_display">
+    <img class="video" src="{{ url_for('video_feed') }}">
+  </div>
+</body>
+{% endblock %}

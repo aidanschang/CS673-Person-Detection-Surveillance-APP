@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{% block title %} {{ file['description'] }} {% endblock %}</h2>
+<span class="badge badge-primary">{{ file['created'] }}</span>
+<span class="badge badge-primary">Facial Detection: {{ file['detected'] }}</span>
+<div style="width: 50%; height: 50%;">
+    <img src="{{ filename }}" alt="{{ filename }}" style="width: 100%;">
+</div>
+
+{% endblock %}
