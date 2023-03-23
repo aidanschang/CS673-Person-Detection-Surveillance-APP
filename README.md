@@ -3,6 +3,8 @@
 
 FaFi, a portmanteau of Face Finder, implements the YOLOv5 pre-trained model to detect any person objects in a live streaming video through the computer's camera. A Surveillance mode can be turned on and stores a snapshot of the video along with other information whenever people are detected inside the video, then an email notification will be sent to the email on file.
 
+I designed an algorithm called objectDetection to detect the number of people in each frame captured by the live web camera. I also fine-tuned the model's inferences to achieve 6 frames per second processing rate.
+
 ## Team Members
   Team Leader- Matthew Kluska<br/>
   QA Leader- Brendan Truong<br/>
